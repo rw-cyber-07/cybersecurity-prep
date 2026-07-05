@@ -91,3 +91,37 @@ for x in ["apple", "banana"]:
 numbers = [10, 20, 30]
 for item in numbers:
     print(item)
+
+# ---------------------#
+# | (==) is equal to     |
+# | (!=) id not equal to |
+# ----------------------#
+
+
+# ==========================================
+# WHILE LOOP
+# ==========================================
+
+# Concept: Repeats a block of code as long as a condition stays True.
+
+number = 100
+while number > 6:
+    print(number)
+    number //= 2
+
+# terminate the infinite  with ctrl + C
+
+correct_password = "cyber"
+guessed_password = ""
+
+print("[*] Starting Brute Force Attack...")
+
+# Keep guessing WHILE the guess is wrong
+while guessed_password != correct_password:
+    # The script tries a guess from its list
+    guessed_password = input("Enter password guess: ")
+
+    if guessed_password == correct_password:
+        print("[+] Access Granted! Password cracked!")
+    else:
+        print("[-] Wrong password. Trying next word...")
