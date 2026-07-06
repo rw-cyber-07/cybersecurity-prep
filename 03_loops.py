@@ -20,6 +20,10 @@ for number in range(1, 4):  # custom start point
 for number in range(1, 10, 2):
     print("Attempt", number * ".")
 
+# cybersecurity eg:
+for port in range(20, 26):
+    print("Checking port", port)
+
     # -----------------------------
     # For... Else Loop
     # -----------------------------
@@ -111,6 +115,11 @@ while number > 6:
 
 # terminate the infinite  with ctrl + C
 
+command = ""
+while command.lower() != "quit":
+    command = input(">")
+    print("ECHO", command)
+
 correct_password = "cyber"
 guessed_password = ""
 
@@ -125,3 +134,31 @@ while guessed_password != correct_password:
         print("[+] Access Granted! Password cracked!")
     else:
         print("[-] Wrong password. Trying next word...")
+
+
+# -----------------------------
+#      Infinite Loops
+# -----------------------------
+
+# An infinite loop is a loop that repeats forever because its stopping condition never becomes `False`.
+# While they are usually accidental bugs that can freeze your program, they are also used on purpose when you want a program to keep running until a user explicitly decides to quit (like a game loop or a command-line menu).
+
+# The Accidental Infinite Loop (The Bug)
+# This happens when you forget to update the variable that the `while` loop is checking.
+
+while True:
+    user_input = input("Say something (or type 'quit'): ")
+
+    if user_input.lower() == "quit":
+        print("Goodbye! 👋")
+        break
+    else:
+        print(f"Robot says: {user_input}")
+
+# Exercise
+count = 0
+for number in range(1, 10):
+    if number % 2 == 0:
+        count += 1
+        print(number)
+print(f"we have {count} even numbers")
