@@ -189,7 +189,7 @@ def multiply(*numbers):
     return total
 
 
-# Loop through *args
+# --------------Loop through *args------------------
 def fruits(*args):
     for fruit in args:
         print(fruit)
@@ -210,7 +210,7 @@ scan("192.168.1.1", "192.168.1.2", "192.168.1.3")
 # *args Take all the extra positional arguments and pack them into one tuple.
 
 
-## **kwargs
+## -------------**kwargs-------------------
 def person(**details):
 
     print(details)
@@ -222,7 +222,7 @@ person(
 # Python stores everything in a dictionary.
 
 
-## Loop through **kwargs
+##------------ Loop through **kwargs-----------------
 def person(**details):
 
     for key, value in details.items():
@@ -242,7 +242,7 @@ def device(**info):
 device(ip="192.168.1.5", status="Online", port=443)
 
 
-## USING BOTH TOGETHER
+## -----------USING BOTH TOGETHER--------------------
 def example(*args, **kwargs):
     print(args)
     print(kwargs)
@@ -269,7 +269,7 @@ square = lambda number: number * number
 print(square(5))
 
 
-# EXAMPLE (normal) :
+# --------------EXAMPLE (normal)--------------- :
 def double(x):
     return x * 2
 
@@ -385,7 +385,7 @@ import math  # (always write it at the top of the file)
 
 print(math.sqrt(16))  # import math as m (python let you shorten it)
 
-# custom module
+# -------------- custom module--------------------
 # *Create a file:mytools.py
 
 from math_tools import add
@@ -413,8 +413,39 @@ import hashlib  # Used for hashing passwords and files.
 import json  # Used for API data.
 import re  # Used for regular expressions.
 
-## PACKAGES
+##---------------- PACKAGES-------------------
 #:Packages help organize many modules.
+# A folder containing related modules
+# security_tools/
+
+#    __init__.py
+#   scanner.py
+#    logger.py
+#    hashing.py
+# Everything inside security_tools belongs together.
+# That's a package.
+
+from security_tools import scanner
+from security_tools import hashing
+
+# Packages keep related files together.
+# cyber_tool/
+
+# │
+# ├── main.py
+# │
+# ├── network/
+# │     ├── scanner.py
+# │     ├── ports.py
+# │
+# ├── logs/
+# │     ├── parser.py
+# │     ├── reader.py
+# │
+# ├── utils/
+# │     ├── hashing.py
+# │     ├── helpers.py
+
 
 # Set → “no duplicates club”
 # Exception → “error safety net”

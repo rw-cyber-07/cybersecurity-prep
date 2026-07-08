@@ -31,3 +31,8 @@ def multiply_all(*numbers):
 
 
 multiply_all(2, 3, 4)
+file = open("data.txt", "w")
+
+file.write("Hello Cybersecurity")
+
+file.close()

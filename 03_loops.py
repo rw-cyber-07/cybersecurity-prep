@@ -24,25 +24,6 @@ for number in range(1, 10, 2):
 for port in range(20, 26):
     print("Checking port", port)
 
-# ==========================================
-# LISTS AND LIST METHODS
-# ==========================================
-# A list is a collection of items inside square brackets []
-ports = [22, 80, 443]
-print(ports)
-
-target_ip_addresses = ["192.168.1.1", "10.0.0.1", "172.16.0.1"]
-# Accessing an item by its position (Index starts at 0!)
-print(target_ip_addresses[0])
-
-
-# ==========================================
-# FOR LOOPS (Using Loops with Lists)
-# ==========================================
-# We use a 'for loop' to step through our list one by one
-for ip in target_ip_addresses:
-    print("Scanning target: " + ip)
-
     # -----------------------------
     # For... Else Loop
     # -----------------------------
@@ -68,6 +49,17 @@ for attempt in range(3):
         print("Wrong Password")
 else:
     print("Vault locked ! too many failed attempt")
+
+##continue tells Python:
+# "Skip the rest of this loop iteration and immediately move to the next one."
+for number in range(1, 6):
+    if number == 3:
+        continue
+
+    print(number)
+    # output : continue will skip just that (3)
+
+##break = “Stop the loop completely.”
 
 # -----------------------------
 #  Nested Loops
