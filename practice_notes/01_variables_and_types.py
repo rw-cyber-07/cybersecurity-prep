@@ -16,7 +16,6 @@ target_ip = "192.168.1.1"  # String
 open_ports = 22  # Integer
 risk_score = 4.5  # Float
 is_vulnerable = True  # Boolean
-
 username = "attacker_404"  # Storing text (String)
 login_attempts = 3  # Storing a whole number (Integer)
 
